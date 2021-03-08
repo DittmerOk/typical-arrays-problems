@@ -1,7 +1,7 @@
 exports.min = function min(array) {
     let min = array[0];
 
-    arr.forEach(function (elem, index) {
+    array.forEach(function (elem, index) {
 
         if (index > 0) {
             if (min < elem) {
@@ -17,7 +17,7 @@ exports.min = function min(array) {
 exports.max = function max(array) {
   let max = array[0];
 
-  arr.forEach(function (elem, index) {
+  array.forEach(function (elem, index) {
 
       if (index > 0) {
           if (max < elem) {
