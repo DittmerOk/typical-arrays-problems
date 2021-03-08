@@ -1,21 +1,33 @@
 exports.min = function min(array) {
-   for (var i = 0; i < array.length; i++) {
-       if (array[i] < array[0]) {
-           array[0] = array[i];
-       }
+    let min = array[0];
 
-   }
+    arr.forEach(function (elem, index) {
+
+        if (index > 0) {
+            if (min < elem) {
+                min = elem;
+            }
+
+        }
+    });
     return min;
 
 }
 
 exports.max = function max(array) {
-    for (var i = 0; i < array.length; i++) {
-        if (array[i] > array[0]) {
-            array[0] = array[i];
-        }
+  let max = array[0];
 
-    }
+  arr.forEach(function (elem, index) {
+
+      if (index > 0) {
+          if (max < elem) {
+              max = elem;
+          }
+
+      }
+  });
+
+    
     return max;
 }
 
