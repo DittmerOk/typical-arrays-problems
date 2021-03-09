@@ -4,7 +4,7 @@ exports.min = function min(array) {
     array.forEach(function (elem, index) {
 
         if (index > 0) {
-            if (min < elem) {
+            if (min > elem) {
                 min = elem;
             }
 
