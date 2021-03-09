@@ -12,7 +12,7 @@ exports.min = function min(array) {
         }
     });
     return min;}
-   else {
+   else if (Array.isArray(array)) {
        return Number('0');
    }
 
@@ -35,7 +35,7 @@ exports.max = function max(array) {
 
     
     return max;}
-    else {
+    else if (Array.isArray(array)) {
         return Number('0');
     }
 
@@ -47,7 +47,7 @@ exports.avg = function avg(array) {
      sum += array[i];
  }
  return sum / i;}
- else {
+ else if (Array.isArray(array)) {
      return Number('0');
  }
  }
