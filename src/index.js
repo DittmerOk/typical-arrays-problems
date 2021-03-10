@@ -1,5 +1,9 @@
 exports.min = function min(array) {
-    if (array.length != 0) {
+    if (!array || !(array[0] !== undefined && array.every((item) => typeof (item) === "number"))) {
+
+
+        return Number('0');
+    } else {
     let min = array[0];
 
     array.forEach(function (elem, index) {
@@ -11,16 +15,16 @@ exports.min = function min(array) {
 
         }
     });
-    return min;}
-   else if (Array.isArray(array)) {
-       return Number('0');
-   }
-
-}
+    return min;
+  } 
+  }
 
 exports.max = function max(array) {
 
-    if (array.length != 0) {
+    if (!array || !(array[0] !== undefined && array.every((item) => typeof (item) === "number"))) {
+
+        return Number('0');
+    } else {
   let max = array[0];
 
   array.forEach(function (elem, index) {
@@ -32,22 +36,27 @@ exports.max = function max(array) {
 
       }
   });
+    return max;
+  } 
 
-    
-    return max;}
-    else if (Array.isArray(array)) {
-        return Number('0');
-    }
+  }
 
-}
+
+
 
 exports.avg = function avg(array) {
-      if (array.length != 0) {
- for (var i = 0, sum = 0; i < array.length; i++) {
-     sum += array[i];
- }
- return sum / i;}
- else if (Array.isArray(array)) {
-     return Number('0');
- }
- }
+      if (!array || !(array[0] !== undefined && array.every((item) => typeof (item) === "number"))) {
+ 
+ 
+ return Number('0');
+}
+    else 
+
+  {
+      for (var i = 0, sum = 0; i < array.length; i++) {
+          sum += array[i];
+      }
+     return sum / i;
+  }
+
+  }
